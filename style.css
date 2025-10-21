@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: #222;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  transition: 0.4s ease;
+  z-index: 1000;
+}
+
+header.scrolled {
+  background: #2e026d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #4f0ce3, #3f2b96);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #ffd700;
+  color: #4f0ce3;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: #3f2b96;
+}
+
+/* Content Sections */
+.content {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #3f2b96;
+}
+
+/* Footer */
+footer {
+  background: #3f2b96;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header.scrolled {
+  background: #1f1f1f;
+}
+
+body.dark .content h2 {
+  color: #ffd700;
+}
+
+body.dark footer {
+  background: #1a1a1a;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #000, #2a2a2a);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
